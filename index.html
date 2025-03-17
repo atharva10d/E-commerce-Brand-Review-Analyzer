@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-Powered E-commerce Brand Review Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>E-commerce Brand Review Analyzer</h1>
+            <p class="tagline">Get AI-Powered Insights into Brand Performance</p>
+        </header>
+
+        <main>
+            <div class="selection-form">
+                <label for="category-select">Category:</label>
+                <select id="category-select">
+                    <option value="">-- Select Category --</option>
+                    <option value="Electronics & Gadgets">Electronics & Gadgets</option>
+                    <option value="Fashion & Apparel">Fashion & Apparel</option>
+                    <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+                    <option value="Home & Kitchen">Home & Kitchen</option>
+                    <option value="Groceries & Food">Groceries & Food</option>
+                    <option value="Books & Media">Books & Media</option>
+                    <option value="Baby & Kids">Baby & Kids</option>
+                    <option value="Pet Products">Pet Products</option>
+                    <option value="Sports & Outdoors">Sports & Outdoors</option>
+                    <!-- Add more categories here -->
+                </select>
+
+                <label for="subcategory-select">Subcategory:</label>
+                <select id="subcategory-select" disabled>
+                    <option value="">-- Select Subcategory --</option>
+                    <!-- Subcategories will be dynamically added here by JS based on category -->
+                </select>
+
+                <label for="brand-select">Brand:</label>
+                <select id="brand-select" disabled>
+                    <option value="">-- Select Brand --</option>
+                    <!-- Brands will be dynamically added here by JS based on subcategory -->
+                </select>
+
+                <button id="analyze-button" disabled>Analyze Brand</button>
+            </div>
+
+            <div id="analysis-results" class="results-section" style="display: none;">
+                <h3>Review Analysis for <span id="selected-brand-name"></span></h3>
+
+                <div class="rating-section">
+                    <h4>Average Rating:</h4>
+                    <div class="rating-circle">
+                        <span id="average-rating-value"></span> / 10
+                    </div>
+                </div>
+
+                <div class="review-points-section">
+                    <div class="good-reviews-section">
+                        <h4>Good Reviews:</h4>
+                        <ul id="good-reviews-list">
+                            <!-- Good reviews list items will be dynamically added here by JS -->
+                        </ul>
+                    </div>
+
+                    <div class="bad-reviews-section">
+                        <h4>Bad Reviews:</h4>
+                        <ul id="bad-reviews-list">
+                            <!-- Bad reviews list items will be dynamically added here by JS -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvement-section">
+                    <h4>Scope of Improvement:</h4>
+                    <ul id="improvement-list">
+                        <!-- Improvement suggestions list items will be dynamically added here by JS -->
+                    </ul>
+                </div>
+            </div>
+
+            <div id="no-data-message" class="error-message" style="display: none;">
+                No data available for the selected brand in this category and subcategory.
+            </div>
+        </main>
+
+        <footer>
+            <p>Designed by Atharva Zope.</p>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
