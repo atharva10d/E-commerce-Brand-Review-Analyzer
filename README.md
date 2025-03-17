@@ -1,1 +1,3 @@
 # E-commerce-Brand-Review-Analyzer
+
+This web application is created to help e-commerce companies better comprehend customer feedback. Utilizing simulated GPT-driven analysis, it offers significant insights into brand performance in different product categories. The analyzer displays average ratings graphically and summarizes the most important positive and negative customer reviews, which are highlighted in actionable areas for improvement. Developed in HTML, CSS, and JavaScript, the tool simplifies review analysis for e-commerce administrators by providing a quick preview of performance-based brand perception and areas for optimization.
